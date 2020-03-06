@@ -1,0 +1,50 @@
+.topline
+  background-color: $acc-brown
+  color: #fff
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  a
+    color: #fff
+    font-weight: 500
+    &:hover
+      opacity: .7
+  &-left
+    a
+      margin-right: 35px
+      &:last-child
+        margin-right: 0
+  &-right
+    font-size: 14px
+  .topline-call
+    display: inline-block
+    padding: 12px 30px
+    background-color: #fff
+    color: $acc-brown
+    &:hover
+      text-decoration: underline
+      opacity: 1
+
+.user-links
+  display: inline-block
+  padding-left: 10px
+  a
+    display: inline-block
+    font-size: 14px
+    position: relative
+    padding-left: 24px
+    padding-right: 24px
+    &:first-child
+      &:after
+        content: ''
+        position: absolute
+        width: 2px
+        height: 20px
+        background-color: #fff
+        right: -1px
+        top: calc(50% - 10px)
+        opacity: .8
+
+
+
