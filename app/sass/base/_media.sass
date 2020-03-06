@@ -6,6 +6,50 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .topline
+    padding: 10px 0
+
+  .topline-phone, .topline-call, .user-links
+    display: none!important
+
+  .topline-left
+    display: flex
+    justify-content: space-between
+    align-items: center
+    a
+      margin-right: 0
+      &:hover
+        opacity: 1
+
+  .head-logo
+    top: 0
+    width: 160px
+    margin-left: 35px
+    img
+      max-width: 100%
+
+  .head-icons
+    top: 3px
+    .svg
+      fill: #fff
+      height: 30px
+    .head-search
+      margin-left: 40px
+    .head-cart
+      margin-left: 35px
+      .svg
+        height: 30px
+
+  .head-cart-num
+    background-color: #fff
+    color: $text
+    left: auto
+    right: -10px
+    bottom: auto
+    top: 0
+
+
+
 // ≥992px
 +media-breakpoint-down(md)
 
@@ -14,6 +58,43 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+  .hamburger
+    width: 25px
+    top: -1px
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    width: 25px
+    height: 2px
+
+  .hamburger--collapse .hamburger-inner:after
+    top: -16px
+
+  .hamburger--collapse .hamburger-inner:before
+    top: -8px
+
+  .head-logo
+    margin-left: 25px
+    width: 95px
+
+  .head-icons
+    .svg
+      height: 22px
+    .head-cart
+      .svg
+        height: 22px
+
+  .head-cart-num
+    width: 16px
+    height: 16px
+    font-size: 11px
+
+@media (max-width: 390px)
+  .head-icons
+    .head-search
+      margin-left: 20px
+    .head-cart
+      margin-left: 15px
+
 
 
 /*==========  Mobile First  ==========*/
