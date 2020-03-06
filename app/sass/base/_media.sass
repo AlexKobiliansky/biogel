@@ -6,6 +6,15 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .intro-img
+    width: 100%
+    position: relative
+    height: 400px
+    margin-top: 30px
+
+  .intro-wrap
+    padding: 40px 0 0
+
   .topline
     padding: 10px 0
 
@@ -52,12 +61,33 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+  .intro-wrap
+    h1
+      font-size: 48px
+      margin-bottom: 15px
+      &:before
+        display: none
+
+  .intro-img
+    height: 300px
+
 
 // ≥768px
 +media-breakpoint-down(sm)
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .intro-wrap
+    padding-top: 35px
+    h1
+      font-size: 45px
+
+  .intro-img
+    height: 160px
+    width: calc(100% + 30px)
+    left: -15px
+
   .hamburger
     width: 25px
     top: -1px
@@ -89,6 +119,13 @@
     font-size: 11px
 
 @media (max-width: 390px)
+
+
+  .intro-wrap
+    padding-top: 20px
+    h1
+      font-size: 35px
+
   .head-icons
     .head-search
       margin-left: 20px
