@@ -6,6 +6,28 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .list-products-top
+    .title
+      margin-left: 85px
+    .price
+      margin-right: 162px
+
+  .list-product
+    padding: 20px
+    &-title
+      padding-left: 30px
+      padding-right: 20px
+      font-size: 16px
+    .btn
+      margin-left: 40px
+      padding-left: 22px
+      padding-right: 22px
+  .catalog-view
+    width: 170px
+
+  .form-search
+    width: calc(100% - 200px)
+
   .intro-img
     width: 100%
     position: relative
@@ -61,6 +83,27 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .section-title
+    font-size: 24px
+
+  .block-product
+    &-img
+      height: 200px
+      img
+        max-width: 160px
+    &-title
+      font-size: 16px
+
+  .catalog-topline
+    margin-bottom: 30px
+
+  .show-sidebar
+    display: block
+
+  .sidebar
+    display: none
+
   .intro-wrap
     h1
       font-size: 48px
@@ -74,9 +117,111 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+  .breadcrumbs
+    font-size: 16px
+    a
+      margin-right: 12px
+      &:after
+        left: 8px
+
+  .view-controls
+    span
+      font-size: 16px
+    li
+      margin-left: 15px
+      .svg
+        width: 20px
+
+  .catalog-view
+    width: 130px
+
+  .form-search
+    width: calc(100% - 130px)
+    font-size: 14px
+    .btn
+      width: 90px
+    label
+      width: calc(100% - 90px)
+    input
+      padding-left: 20px
+      padding-right: 20px
+
+  .s-intro
+    margin-bottom: 0
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .catalog-list
+    .btn-wrap
+      margin-top: 30px
+
+  .list-products-top
+    display: none
+
+  .list-product
+    padding: 20px 10px
+    &-img
+      max-width: 20px
+    &-title
+      font-size: 14px
+      padding-left: 10px
+    &-price
+      font-size: 14px
+      max-width: 65px
+    .btn
+      display: none
+    .tocart
+      display: block
+      .svg
+        height: 20px
+        width: auto
+        fill: $acc-brown
+        margin-left: 10px
+    &-label
+      font-size: 10px
+      padding: 5px 8px
+      max-width: 75px
+      left: 0
+
+  .block-product
+    &-midline
+      flex-wrap: wrap
+    &-title
+      width: 100%
+      text-align: center
+      margin-bottom: 10px
+    &-price
+      font-weight: 500
+      text-align: center
+      width: 100%
+
+  .breadcrumbs
+    font-size: 14px
+    padding: 30px 0
+
+  .form-search
+    .btn
+      padding-top: 10px
+      padding-bottom: 9px
+    input
+      padding-top: 10px
+      padding-bottom: 9px
+
+  .show-sidebar
+    font-size: 16px
+    padding: 12px 14px 11px
+    &:after
+      width: 12px
+      height: 7px
+      top: calc(50% - 3.5px)
+
+  .sidebar
+    font-size: 14px
+
+  .side-mnu
+    a
+      padding: 12px 14px 11px
 
   .intro-wrap
     padding-top: 35px
@@ -120,6 +265,44 @@
 
 @media (max-width: 390px)
 
+  .block-product
+    &-img
+      height: 140px
+      img
+        max-width: 100px
+    &-midline
+      padding-left: 0
+      padding-right: 0
+    &-title
+      font-size: 14px
+    .btn
+      font-size: 12px
+      padding: 12px
+
+  .catalog-view
+    width: 75px
+    span
+      display: none
+
+  .catalog-topline
+    margin-bottom: 20px
+
+  .form-search
+    width: calc(100% - 75px)
+    .btn
+      width: 40px
+      span
+        display: none
+      .svg
+        display: block
+        margin-left: auto
+        margin-right: auto
+    label
+      width: calc(100% - 40px)
+
+  .section-title
+    font-size: 20px
+    margin-bottom: 20px
 
   .intro-wrap
     padding-top: 20px

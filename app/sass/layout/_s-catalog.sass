@@ -1,0 +1,323 @@
+.side-mnu
+  margin-bottom: 30px
+  a
+    display: block
+    background-color: #fff
+    padding: 19px 28px 17px
+    margin-bottom: 2px
+    font-weight: 500
+    color: $text
+    &:hover
+      background-color: $acc-brown
+      color: #fff
+  .active
+    a
+      background-color: $acc-brown
+      color: #fff
+
+.filters
+  &-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+    span
+      font-weight: 500
+  &-reset
+    color: #857d71
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+      color: #857d71
+    &:active, &:focus
+      text-decoration: none
+      color: #857d71
+  &-active
+    margin-bottom: 18px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-wrap: wrap
+    .filter
+      padding: 10px 30px 8px 10px
+      background-color: #e8e8e8
+      font-size: 14px
+      position: relative
+      margin-bottom: 2px
+      margin-right: 2px
+      .reset
+        width: 8px
+        height: 8px
+        background-image: url('../img/icons/del-icon.svg')
+        +bg-cover
+        position: absolute
+        right: 9px
+        top: calc(50% - 4px)
+        cursor: pointer
+
+.filter-item
+  margin-bottom: 2px
+  &-head
+    position: relative
+    font-weight: 500
+    padding: 20px 40px 18px 20px
+    background-color: #fff
+    cursor: pointer
+    &:after
+      content: ''
+      position: absolute
+      width: 12px
+      height: 7px
+      background-image: url('../img/icons/select-arrow.svg')
+      +bg-cover
+      right: 20px
+      top: calc(50% - 3.5px)
+  &.active
+    .filter-item-head
+      &:after
+        transform: rotate(180deg)
+  &-list
+    display: none
+    background-color: #fff
+    padding: 5px 0
+    label
+      padding: 5px 18px
+      margin-bottom: 10px
+      cursor: pointer
+      display: flex
+      align-items: center
+    .jq-checkbox
+      width: 21px
+      height: 21px
+      background: transparent
+      box-shadow: none
+      border: 2px solid $acc-brown
+      border-radius: 0
+      margin-right: 16px
+      position: relative
+      top: -2px
+      &.checked
+        background-color: $acc-brown
+        .jq-checkbox__div
+          transform: none
+          border: none
+          width: 13px
+          height: 11px
+          background-image: url('../img/icons/checkbox-arrow-white.svg')
+          +bg-cover
+          margin: 2px auto 0
+
+
+.catalog-topline
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.form-search
+  width: 650px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  font-size: 18px
+  label
+    width: calc(100% - 127px)
+    margin-bottom: 0
+  input
+    border: none
+    color: $text
+    padding: 17px 42px 16px
+    &::placeholder
+      color: rgba($text, .8)
+  .btn
+    width: 127px
+    padding: 19px 10px 17px
+    .svg
+      width: 14px
+      height: auto
+      fill: #fff
+      display: none
+
+.catalog-view
+  width: calc(100% - 680px)
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 100%
+  span
+    font-size: 18px
+
+.view-controls
+  li
+    display: inline-block
+    margin-left: 25px
+    .svg
+      width: 32px
+      height: auto
+      fill: #bbbbbb
+      +mt(.3s)
+      &:hover
+        fill: $acc-brown
+    &.ui-tabs-active
+      .svg
+        fill: $acc-brown
+
+.catalog
+  margin-top: 45px
+  .btn-wrap
+    .btn
+      width: 100%
+      font-size: 14px
+      font-weight: 500
+      padding: 19px 0 17px
+
+.block-product
+  margin-bottom: 30px
+  &-img
+    width: 100%
+    height: 250px
+    background-color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 30px
+    position: relative
+    img
+      max-width: 174px
+  &-label
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 2
+    font-size: 12px
+    padding: 8px 13px 7px
+    background-color: $acc-pink
+    display: none
+  &-midline
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding: 17px 10px
+  &-title
+    font-size: 18px
+    font-weight: 500
+    color: $text
+    width: calc(100% - 80px)
+    &:hover
+      color: $acc-brown
+  &-price
+    font-size: 14px
+    width: 80px
+    text-align: right
+    position: relative
+    top: 2px
+  .btn
+    width: 100%
+    padding: 17px
+    font-size: 14px
+    font-weight: 500
+  &.not-available
+    opacity: .6
+    .block-product-label
+      display: block
+    .btn
+      pointer-events: none
+
+.show-sidebar
+  font-size: 18px
+  font-weight: 500
+  background-color: #fff
+  position: relative
+  padding: 19px 29px 17px
+  +mt(.3s)
+  cursor: pointer
+  display: none
+  &:after
+    content: ''
+    position: absolute
+    width: 18px
+    height: 11px
+    background-image: url('../img/icons/select-arrow.svg')
+    +bg-cover
+    right: 20px
+    top: calc(50% - 5px)
+  &.active
+    background-color: #e8e8e8
+    &:after
+      transform: rotate(180deg)
+
+.list-products-top
+  display: flex
+  margin-bottom: 23px
+  justify-content: space-between
+  align-items: center
+  font-weight: 500
+  opacity: .7
+  .title
+    margin-left: 145px
+  .price
+    width: 85px
+    margin-right: 290px
+    text-align: center
+
+.list-product
+  background-color: #fff
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 22px 40px
+  margin-bottom: 20px
+  &-img
+    max-width: 35px
+    width: 100%
+    height: auto
+  .btn
+    padding: 12px 43px 11px
+    margin-left: 106px
+    font-size: 14px
+  &-price
+    font-weight: 500
+    max-width: 85px
+    width: 100%
+    white-space: nowrap
+    flex-grow: 3
+    text-align: center
+  &-title
+    flex-grow: 2
+    padding-left: 70px
+    padding-right: 30px
+    font-size: 18px
+    font-weight: 500
+    text-decoration: underline
+    color: $text
+    &:hover
+      color: $text
+      text-decoration: none
+  &-label
+    font-size: 12px
+    max-width: 100px
+    width: 100%
+    white-space: nowrap
+    flex-grow: 3
+    padding: 12px 12px 11px
+    background-color: $acc-pink
+    display: none
+    position: relative
+    right: -7.5px
+  &.not-available
+    opacity: .6
+    .list-product-price
+      display: none
+    .list-product-label
+      display: block
+    .btn
+      pointer-events: none
+  .tocart
+    display: none
+
+.catalog-list
+  .btn-wrap
+    margin-top: 50px
+
+
+
+

@@ -24,6 +24,7 @@ body
   font-family: $default-font
   overflow-x: hidden
   color: $text
+  background-color: #f8f8f8
   input, textarea
     border: #666 1px solid
     outline: none
@@ -63,5 +64,69 @@ ul
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+
+.breadcrumbs
+  padding: 45px 0
+  font-size: 18px
+  a
+    position: relative
+    color: $text
+    display: inline-block
+    margin-right: 18px
+    &:after
+      content: '/'
+      color: $text
+      position: relative
+      left: 10px
+      opacity: 1
+    &:last-child
+      margin-right: 0
+      pointer-events: none
+      opacity: .5
+      &:after
+        display: none
+    &:hover
+      opacity: .6
+
+
+form
+  label
+    display: block
+  input
+    width: 100%
+    background-color: #fff
+
+.btn
+  display: inline-block
+  box-shadow: none
+  line-height: 1
+  white-space: nowrap
+  +mt(.3s)
+  cursor: pointer
+  text-align: center
+
+.btn-brown
+  background-color: $acc-brown
+  color: #fff
+  border: none
+  &:hover, &:active, &:focus
+    background-color: darken($acc-brown, 10%)
+    color: #fff
+
+.section-title
+  font-size: 30px
+  font-weight: 500
+  margin-bottom: 35px
+
+.btn-transparent
+  background-color: transparent
+  border: 1px solid $acc-brown
+  color: $text
+  &:hover
+    background-color: $acc-brown
+    color: #fff
+  &:active, &:focus
+    background-color: transparent
+    color: $text
 
 

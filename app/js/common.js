@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
     //*** mobile-mnu customization *****//
     var mmenu = $('#mobile-mnu');
     var menuLogo = mmenu.data("logo");
@@ -73,6 +75,68 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('.catalog-container').tabs();
+
+
+
+    var filterCheck = $('.filter-item-list input[type="checkbox"]');
+
+    filterCheck.styler();
+
+    filterCheck.change(function(){
+        var name = $(this).attr('name');
+
+        if ($(this).is(":checked")) {
+            $('.filters-active').append('<div class="filter" data-name="'+ name +'">'+ name +'<a href="#0" class="reset"></a></div>');
+            removeFilter();
+        } else {
+            $('.filters-active .filter[data-name="'+name+'"]').remove();
+        }
+    });
+
+    $('.filter-item').on('click', '.filter-item-head', function(){
+        var parent = $(this).parents('.filter-item');
+       parent.toggleClass('active');
+       parent.find('.filter-item-list').slideToggle();
+    });
+
+
+    $('.filters-reset').on('click', function(e){
+        e.preventDefault();
+
+        $('.filters-active').html("");
+
+        $('.filter-item-list label').each(function(){
+            $(this).find('.jq-checkbox').removeClass('checked');
+            $(this).find('input').prop('checked', false);
+        })
+    });
+
+    function removeFilter() {
+        $('.filters-active .filter').each(function(){
+            var th = $(this),
+                name = th.data('name'),
+                reset = th.find('.reset');
+
+            reset.on('click', function(e){
+                e.preventDefault();
+                th.remove();
+                $('.filter-item-list input[name="'+ name +'"]').prop('checked', false);
+                $('.filter-item-list input[name="'+ name +'"]').parents('.jq-checkbox').removeClass('checked');
+            });
+        });
+    }
+
+    $('.show-sidebar').click(function () {
+        $(this).toggleClass('active');
+        $('.sidebar').slideToggle();
+
+        $(this).text(function(i, text){
+            return text === "Развернуть фильтры" ? "Свернуть фильтры" : "Развернуть фильтры";
+        })
+    });
+
+
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
@@ -87,4 +151,20 @@ $(document).ready(function(){
         });
         return false;
     });
+
+
+    function heightses() {
+        if ($(window).width()>480) {
+
+        }
+        $('.block-product-title').equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    setTimeout(function(){
+        heightses()
+    }, 200);
 });
