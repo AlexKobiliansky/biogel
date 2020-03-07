@@ -101,6 +101,8 @@ $(document).ready(function(){
         }
     });
 
+    $('.preloader').fadeOut();
+
 
 
     var filterCheck = $('.filter-item-list input[type="checkbox"]');
@@ -168,6 +170,15 @@ $(document).ready(function(){
             return text === "Подробнее" ? "Свернуть" : "Подробнее";
         })
     });
+
+    if ($(window).width()<992) {
+        $('.foot-item h3').click(function(){
+            var parent = $(this).parents('.foot-item');
+
+            parent.toggleClass('active');
+            parent.find('.foot-item-content').slideToggle();
+        })
+    }
 
 
 
