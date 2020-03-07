@@ -6,6 +6,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .stock
+    padding-left: 50px
+    padding-right: 50px
+
   .list-products-top
     .title
       margin-left: 85px
@@ -84,6 +88,10 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .stock
+    &-title
+      font-size: 40px
+
   .section-title
     font-size: 24px
 
@@ -151,6 +159,19 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .stock
+    padding-left: 20px
+    padding-right: 20px
+    height: 240px
+    &-title
+      font-size: 32px
+    &-desc
+      font-size: 16px
+      margin-bottom: 30px
+    .btn
+      width: 140px
+      padding: 14px 14px 13px
 
   .features
     padding: 20px
@@ -272,6 +293,9 @@
     font-size: 11px
 
 @media (max-width: 390px)
+
+  .stock
+    height: 200px
 
   .features-desc
     font-size: 14px
