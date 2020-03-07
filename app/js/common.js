@@ -77,6 +77,30 @@ $(document).ready(function(){
 
     $('.catalog-container').tabs();
 
+    $('.nova-slider').owlCarousel({
+        loop:false,
+        nav: true,
+        margin: 30,
+        dots: false,
+        navText: ["",""],
+        responsive : {
+            0 : {
+                items: 1,
+                autoWidth: true
+            },
+            480 : {
+                items: 2,
+                autoWidth: false
+            },
+            768 : {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+        }
+    });
+
 
 
     var filterCheck = $('.filter-item-list input[type="checkbox"]');
@@ -163,8 +187,8 @@ $(document).ready(function(){
 
 
     function heightses() {
-        if ($(window).width()>480) {
-
+        if ($(window).width()<480) {
+            $('.nova-slide-title').equalHeights();
         }
         $('.block-product-title').equalHeights();
     }

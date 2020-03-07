@@ -6,6 +6,15 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-novelty
+    padding-top: 15px
+
+  .nova-slide
+    &-img
+      height: 200px
+      img
+        max-width: 140px
+
   .stock
     padding-left: 50px
     padding-right: 50px
@@ -160,6 +169,32 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .nova-slide
+    width: 150px
+    &-img
+      height: 150px
+      img
+        max-width: 92px
+    &-content
+      flex-direction: column
+      padding: 20px 0 0
+    &-title
+      width: 100%
+      margin-bottom: 10px
+    &-name
+      font-size: 16px
+    &-price
+      font-size: 14px
+      width: 100%
+      text-align: left
+
+  .nova-slider
+    width: calc(100% + 15px)
+    .owl-nav
+      width: 70px
+      right: 15px
+
+
   .stock
     padding-left: 20px
     padding-right: 20px
@@ -293,6 +328,10 @@
     font-size: 11px
 
 @media (max-width: 390px)
+
+  .nova-slider
+    .owl-nav
+      top: -45px
 
   .stock
     height: 200px

@@ -1,0 +1,82 @@
+.s-novelty
+  padding-top: 60px
+  padding-bottom: 40px
+
+.nova-slide
+  &-img
+    height: 250px
+    padding: 20px
+    position: relative
+    background-color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      max-width: 174px
+      width: 100%
+      height: auto
+  &-label
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 2
+    font-size: 12px
+    background-color: $acc-pink
+    text-align: center
+    padding: 8px
+    width: 68px
+  &-content
+    padding: 15px 10px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-price
+    font-size: 12px
+    width: 60px
+    text-align: right
+  &-title
+    width: calc(100% - 80px)
+  &-name
+    font-size: 18px
+    font-weight: 500
+    color: $text
+    margin-bottom: 7px
+    display: inline-block
+    &:hover
+      color: $acc-brown
+  &-collection
+    font-size: 14px
+
+.nova-slider
+  position: relative
+  .owl-nav
+    position: absolute
+    z-index: 2
+    right: 0
+    top: -64px
+    font-size: 0
+    width: 90px
+    button.owl-prev, button.owl-next
+      position: absolute
+      top: 0
+      width: 30px
+      height: 30px
+      background-color: $acc-brown
+      +mt(.3s)
+      cursor: pointer
+      background-image: url('../img/icons/select-arrow-white.svg')
+      background-size: 12px 8px
+      background-position: center center
+      background-repeat: no-repeat
+      &:hover
+        background-color: darken($acc-brown, 10%)
+      &.disabled
+        background-color: #e1e1e1
+        background-image: url('../img/icons/select-arrow.svg')
+        cursor: inherit
+    button.owl-prev
+      left: 0
+      transform: rotate(90deg)
+    button.owl-next
+      right: 0
+      transform: rotate(-90deg)
