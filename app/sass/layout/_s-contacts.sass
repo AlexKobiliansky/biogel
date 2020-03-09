@@ -1,0 +1,108 @@
+.s-map
+  padding-bottom: 75px
+
+.map-topline
+  background-color: #fff
+  padding: 25px 27px 16px
+  font-size: 14px
+  label
+    margin-right: 45px
+    display: inline-flex
+    align-items: center
+    margin-bottom: 0
+  .select-label
+    position: relative
+    top: -5px
+    span
+      position: relative
+      top: -2px
+  .checkbox-label
+    span
+      position: relative
+      top: 1px
+      cursor: pointer
+  .jq-selectbox__select
+    height: auto
+    background: #fff
+    box-shadow: none
+    border: none
+    border-bottom: 1px solid #b2b2b2
+    border-radius: 0
+    padding-left: 0
+    margin-left: 15px
+    font-weight: 500
+    padding-right: 20px
+    padding-top: 6px
+    width: 180px
+    line-height: 1
+    padding-bottom: 10px
+  .jq-selectbox.focused
+    .jq-selectbox__select
+      border: none
+      border-bottom: 1px solid #b2b2b2
+  .jq-selectbox__select-text
+    font-weight: 500
+    font-family: $default-font
+    letter-spacing: initial
+    font-size: 16px
+  .jq-selectbox__trigger
+    border-left: none
+    width: 12px
+  .jq-selectbox__trigger-arrow
+    border: none
+    width: 8px
+    height: 6px
+    background-image: url('../img/icons/select-arrow.svg')
+    +bg-cover
+    right: 0
+    top: 7px
+  .jq-selectbox li:hover
+    background-color: $acc-brown
+  .jq-selectbox.opened
+    .jq-selectbox__trigger-arrow
+      transform: rotate(180deg)
+
+  .jq-checkbox
+    width: 20px
+    height: 20px
+    background: #fff
+    border: 1px solid #606060
+    border-radius: 0
+    margin-right: 12px
+  .jq-checkbox.checked .jq-checkbox__div
+    transform: none
+    border: none
+    width: 10px
+    height: 10px
+    background-color: $acc-brown
+    margin: 4px auto 0
+
+.ymaps-2-1-75-balloon__content
+  padding: 0!important
+
+.ymaps-2-1-75-balloon__tail:after
+  background-color: $acc-brown!important
+
+#map
+  height: 455px
+  background-color: #e8e8e8
+
+.baloon-item
+  background-color: $acc-brown
+  color: #fff
+  padding: 13px
+  max-width: 280px
+  font-family: $default-font
+
+.baloon-title
+  font-size: 16px
+  font-weight: 500
+  margin-bottom: 20px
+
+.baloon-address
+  font-size: 14px
+  margin-bottom: 25px
+
+.baloon-type
+  font-size: 14px
+  font-weight: 500
