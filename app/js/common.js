@@ -428,13 +428,6 @@ $(document).ready(function(){
                 });
                 map.geoObjects.add(placemark);
             }
-
-
-
-
-
-
-
         });
     }
 
@@ -447,4 +440,26 @@ $(document).ready(function(){
         }, 2000);
     }
     /** MAPS END */
+
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 1000) {
+            $('#totop').css('opacity', '1');
+        } else {
+            $('#totop').css('opacity', '0');
+        }
+    });
+
+    $('body').bind('touchmove', function (e)
+    {
+        if($(this).scrollTop() > 1000) {
+            $('#totop').css('opacity', '1');
+        } else {
+            $('#totop').css('opacity', '0');
+        }
+    });
+
+    $('#totop').click(function() {
+        $('body,html').animate({scrollTop:0},600);
+    });
 });

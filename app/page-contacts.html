@@ -99,7 +99,7 @@
                         </a>
                     </div>
 
-                    <a href="#0" class="topline-call">Заказать звонок</a>
+                    <a href="#popup-form" class="topline-call">Заказать звонок</a>
                     <div class="user-links">
                         <a href="#0">Регистрация</a>
                         <a href="#0">Войти</a>
@@ -394,13 +394,46 @@
     <!-- ======= FOOTER END ======= -->
 </div>
 
-
+<a href="#0" id="totop"><img src="img/icons/to-top-btn.svg" alt="alt" class="svg"></a>
 
 <div class="hidden">
+
     <div class="video-popup" id="video-popup">
         <div class="video-player">
             <div class="you-player" id="videoPlayer-0"></div>
         </div>
+    </div>
+
+    <form class="contact-form popup-form" id="popup-form">
+
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="BIO SCULPTURE">
+        <input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+        <input type="hidden" name="form_subject" value="Заявка на обратный звонок с сайта BIO SCULPTURE">
+        <!-- END Hidden Required Fields -->
+
+        <h3>Заявка на обратный звонок</h3>
+        <div class="form-labels-wrap">
+            <label>
+                <input type="text" placeholder="Ваше Фио" name="Имя" autocomplete="off" data-validation="custom"
+                       data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,100}$">
+            </label>
+            <label>
+                <input type="text" class="user-phone" name="Телефон" placeholder="Ваш телефон"
+                       autocomplete="off" data-validation="custom"
+                       data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+            </label>
+            <button type="submit" class="btn btn-brown">Отправить</button>
+            <label class="checkbox-label">
+                <input type="checkbox" required checked> <span>Даю свое согласие на обработку персональных данных</span>
+            </label>
+
+        </div>
+    </form>
+
+    <div class="contact-form popup-form greeting" id="popup-greeting">
+        <h3>Заявка отправлена!</h3>
+        <p>Наши специалисты свяжутся с Вами в ближайшее время</p>
     </div>
 </div>
 
