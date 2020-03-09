@@ -1,0 +1,181 @@
+.s-product
+  padding-top: 15px
+
+
+.product-slider-wrap
+  display: flex
+  justify-content: space-between
+  margin-bottom: 30px
+
+.product-slider
+  width: 360px
+
+.product-slider-nav
+  width: calc(100% - 390px)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.product-slide
+  height: 360px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fff
+  img
+    width: 100%
+    max-width: 200px
+
+.product-nav
+  width: 100%
+  height: 70px
+  background-color: #fff
+  background-size: 70%
+  background-position: center center
+  background-repeat: no-repeat
+  cursor: pointer
+
+.product-video
+  display: flex
+  margin-bottom: 30px
+  &-thumb
+    width: 165px
+    height: 160px
+    +bg-cover
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 45px
+      height: auto
+    a
+      position: relative
+      z-index: 2
+      filter: grayscale(.2)
+      &:hover
+        filter: none
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: #2f2f2f
+      opacity: .4
+  &-content
+    background-color: #fff
+    padding: 30px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex-wrap: wrap
+    .title
+      font-size: 18px
+      font-weight: 500
+      text-decoration: underline
+      color: $text
+      width: 100%
+      margin-bottom: 15px
+      &:hover
+        text-decoration: none
+        color: $text
+    .desc
+      width: 100%
+      font-size: 14px
+      line-height: 1.5
+      opacity: .7
+
+.product-recomendations
+  background-color: #fff
+  padding: 40px 100px 40px 40px
+  &-title
+    font-size: 22px
+    font-weight: 500
+    margin-bottom: 25px
+  li
+    padding-left: 19px
+    position: relative
+    opacity: .8
+    line-height: 1.6
+    margin-bottom: 10px
+    &:before
+      content: ''
+      position: absolute
+      width: 4px
+      height: 4px
+      background-color: $acc-brown
+      left: 0
+      top: 9px
+
+.you-player
+  width: 100%
+  height: 500px
+
+.video-popup
+  max-width: 800px
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+.product
+  &-title
+    font-size: 30px
+    font-weight: 500
+    margin-bottom: 30px
+    margin-top: 25px
+  &-char
+    margin-bottom: 20px
+    &-title
+      font-size: 14px
+      font-weight: 500
+      opacity: .8
+      margin-bottom: 12px
+    &-desc
+      line-height: 1.6
+  &-size
+    font-size: 14px
+    padding: 10px 5px 9px
+    text-align: center
+    border: 1px solid $acc-brown
+    line-height: 1
+    display: inline-block
+    margin-right: 20px
+    margin-bottom: 20px
+    width: 70px
+    cursor: pointer
+    +mt(.1s)
+    &:hover, &.active
+      background-color: $acc-brown
+      color: #fff
+
+
+.product-midline
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 50px
+  .to-cart
+    padding: 13px 13px 11px
+    width: 165px
+    margin-right: 28px
+  .product-num
+    color: $acc-brown
+    text-decoration: underline
+    margin-right: 22px
+  .to-favorites
+    .svg
+      width: 17px
+      height: auto
+      fill: $acc-brown
+      margin-right: 5px
+      position: relative
+      top: 3px
+      +mt(.3s)
+    &:hover
+      .svg
+        fill: $text
+
+
+

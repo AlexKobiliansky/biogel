@@ -96,6 +96,63 @@ form
   input
     width: 100%
     background-color: #fff
+  .help-block
+    display: none
+
+.contact-form
+  padding: 40px
+  background-color: $acc-pink
+  h3
+    font-size: 22px
+    font-weight: 500
+    margin-bottom: 30px
+  label
+    width: 100%
+    margin-bottom: 24px
+  .form-half
+    width: calc(50% - 15px)
+  input
+    padding: 16px 20px 14px
+    font-size: 14px
+    color: $text
+    border: 1px solid $acc-brown
+    &::placeholder
+      color: $text
+      opacity: .7
+    &.error
+      border-color: red!important
+      color: red!important
+      &::placeholder
+        color: red!important
+  .form-labels-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+  .btn
+    padding: 16px 15px 15px
+  .checkbox-label
+    font-size: 12px
+    color: rgba($text, .7)
+    display: flex
+    line-height: 1.5
+    padding-top: 5px
+    margin-bottom: 0
+    span
+      width: calc(100% - 23px)
+  .jq-checkbox
+    width: 13px
+    height: 13px
+    background: #fff
+    border-radius: 0
+    border: 1px solid $acc-brown
+    margin-right: 10px
+    position: relative
+    top: 2px
+  .jq-checkbox.checked .jq-checkbox__div
+    margin-left: 2px
+
+
 
 .btn
   display: inline-block
@@ -172,26 +229,41 @@ form
   100%
     transform: rotate(360deg)
 
-
-
 @keyframes sk-chasing-dots-rotate
   100%
     transform: rotate(360deg)
 
-
 @-webkit-keyframes sk-chasing-dots-bounce
   0%, 100%
     transform: scale(0)
-
   50%
     transform: scale(1)
-
 
 @keyframes sk-chasing-dots-bounce
   0%, 100%
     transform: scale(0)
-
   50%
     transform: scale(1)
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
 
 

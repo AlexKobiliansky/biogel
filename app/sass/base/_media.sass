@@ -6,6 +6,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-product
+    margin-bottom: 30px
+
   .s-novelty
     padding-top: 15px
 
@@ -97,6 +100,20 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .product-title
+    margin-top: 0
+
+  .product-form
+    margin-bottom: 30px
+
+  .product-video-content
+    width: calc(100% - 165px)
+
+  .product-slider-wrap
+    max-width: 470px
+    margin-left: auto
+    margin-right: auto
+
   .foot-nav
     li
       li
@@ -180,6 +197,10 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .you-player
+    height: 400px
+
   .breadcrumbs
     font-size: 16px
     a
@@ -214,6 +235,56 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .product-recomendations
+    padding-right: 40px
+
+  .product-midline
+    flex-wrap: wrap
+    margin-bottom: 30px
+    .to-cart
+      width: 100%
+      order: 2
+      margin-top: 20px
+      margin-right: 0
+      padding-top: 18px
+      padding-bottom: 16px
+    .product-num
+      margin-right: 0
+      padding-right: 20px
+      width: 50%
+    .to-favorites
+      width: 50%
+      text-align: right
+
+  .product-slider-wrap
+    flex-wrap: wrap
+
+  .product-slider
+    width: 100%
+    margin-bottom: 10px
+
+  .product-slider-nav
+    width: 100%
+    flex-direction: row
+
+  .product-slide
+    height: 300px
+    img
+      max-width: 250px
+
+  .contact-form
+    .form-half
+      width: 100%
+    .btn
+      margin-bottom: 5px
+
+  .product-nav
+    width: calc(25% - 10px)
+
+  .you-player
+    height: 300px
+
 
   .foot-bottom
     .container
@@ -386,6 +457,31 @@
     font-size: 11px
 
 @media (max-width: 390px)
+
+  .product-recomendations
+    padding: 40px 20px
+
+  .product-video
+    flex-wrap: wrap
+    &-thumb
+      width: 100%
+    &-content
+      width: 100%
+
+  .product-title
+    font-size: 24px
+    margin-bottom: 15px
+
+  .product-slide
+    height: 240px
+    img
+      max-width: 200px
+
+  .contact-form
+    padding: 30px 20px
+
+  .you-player
+    height: 240px
 
   .nova-slider
     .owl-nav
