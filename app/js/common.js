@@ -115,6 +115,32 @@ $(document).ready(function(){
         mouseDrag: false,
     });
 
+    var introSlider = $('.intro-slider').owlCarousel({
+        loop:false,
+        nav:true,
+        items: 1,
+        dots: false,
+        autoHeight: true,
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        navText: ["",""],
+        mouseDrag: false,
+    });
+
+    var $slides = introSlider.find('.intro-slide');
+    var $totalSlides = $slides.length;
+
+    $('#total').text('0' + $totalSlides);
+
+    introSlider.on('changed.owl.carousel', function (e) {
+        var currentItem = e.item.index + 1;
+        $('#current').text('0'+currentItem);
+    });
+
+
+
+
+
     $('.preloader').fadeOut();
 
 
